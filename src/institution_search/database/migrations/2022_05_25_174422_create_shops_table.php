@@ -14,8 +14,6 @@ return new class extends Migration
      */
     public function up()
     {
-        // テーブルを作成するには、Schema::createメソッドを使用します
-        // 新しいテーブルを定義するためのBlueprintオブジェクトを取ります。
         Schema::create('shops', function (Blueprint $table) {
             $table->id();
             $table->foreignId('shop_plan_id')->constrained()->onDelete('cascade');
@@ -31,11 +29,6 @@ return new class extends Migration
             $table->string('introduction_text')->comment('紹介テキスト');
             $table->timestamps();
         });
-        // // テスト用DBを制作
-        // DB::table('shops')->insert(['id'=>0000000,'shop_plan_id'=>'', 'name'=>'Bland本店', 
-        //                     'email'=>'test@example.com', 'tel'=>'09012345678', 'manager'=>'田中太郎',
-        //                     'zip_code_jp'=>'120-0006', 'prefectures'=>'東京都', 'city'=>'足立区', 
-        //                     'unique_name'=>'谷中1-2-3', 'images'=>'', 'introduction_text'=>'紹介文をここに書きます。' ]); 
     }
 
     /**

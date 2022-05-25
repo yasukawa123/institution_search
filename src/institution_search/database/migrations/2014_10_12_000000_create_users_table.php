@@ -27,18 +27,18 @@ return new class extends Migration
             $table->string('unique_name')->comment('地名番地');
             $table->timestamps();
         });
-        // DB::table('users')->insert(['id' => 0000000000001, 'name' => '山田太郎', 'email' => 'sute1@example.com',
-        //      'password' => bcrypt('password'), 'birthdate' => '2001-4-22', 'tel' => '09011111111', 'zip_code' => '120-0001', 
-        //      'prefectures' => '東京都', 'city' => '千代田区', 'unique_name' => '千代田1-4-2'
-        //     ]);
-        // DB::table('users')->insert(['id' => 0000000000002, 'name' => '開発はなこ', 'email' => 'sute2@example.com',
-        //      'password' => bcrypt('password'), 'birthdate' => '1998-9-2', 'tel' => '09022222222', 'zip_code' => '140-1124', 
-        //      'prefectures' => '愛知県', 'city' => '千代田区', 'unique_name' => '千代田1-4-2'
-        //     ]);
-        // DB::table('users')->insert(['id' => 0000000000003, 'name' => '伊藤英明', 'email' => 'sute3@example.com',
-        //      'password' => bcrypt('password'), 'birthdate' => '1972-4-22', 'tel' => '09022222222', 'zip_code' => '302-2321', 
-        //      'prefectures' => '大阪府', 'city' => '大阪市', 'unique_name' => '大淀北1-44-1'
-        //     ]);           
+        DB::table('users')->insert(['id' => 1, 'name' => '山田太郎', 'email' => 'sute1@example.com',
+             'password' => bcrypt('password'), 'birthdate' => '2001-4-22', 'tel' => '09011111111', 'zip_code' => '120-0001', 
+             'prefectures' => '東京都', 'city' => '千代田区', 'unique_name' => '千代田1-4-2'
+            ]);
+        DB::table('users')->insert(['id' => 2, 'name' => '開発はなこ', 'email' => 'sute2@example.com',
+             'password' => bcrypt('password'), 'birthdate' => '1998-9-2', 'tel' => '09022222222', 'zip_code' => '140-1124', 
+             'prefectures' => '愛知県', 'city' => '千代田区', 'unique_name' => '千代田1-4-2'
+            ]);
+        DB::table('users')->insert(['id' => 3, 'name' => '伊藤英明', 'email' => 'sute3@example.com',
+             'password' => bcrypt('password'), 'birthdate' => '1972-4-22', 'tel' => '09022222222', 'zip_code' => '302-2321', 
+             'prefectures' => '大阪府', 'city' => '大阪市', 'unique_name' => '大淀北1-44-1'
+            ]);           
         
     }
 
