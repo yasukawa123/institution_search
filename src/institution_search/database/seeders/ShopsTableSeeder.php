@@ -4,9 +4,8 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;// ← 追記 *
 
-class ShopPlansTableSeeder extends Seeder
+class ShopsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,6 +14,6 @@ class ShopPlansTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        \App\Models\Shops::factory()->count(12)->create();
     }
 }
