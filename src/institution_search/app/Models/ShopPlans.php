@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Shops extends Model
+class ShopPlans extends Model
 {
     use HasFactory;
 
@@ -14,8 +14,8 @@ class Shops extends Model
         return $this->hasOne(Reserves::class);
     }
 
-    public function shopPlans()
+    public function shops()
     {
-        return $this->hasOne(ShopPlans::class);
+        return $this->belongTo(Shops::class);
     }
 }

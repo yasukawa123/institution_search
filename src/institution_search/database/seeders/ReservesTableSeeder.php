@@ -14,6 +14,6 @@ class ReservesTableSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\reserves::factory()->count(10)->create();
+        \App\Models\Reserves::factory()->count(10)->create();
     }
 }

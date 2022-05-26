@@ -27,9 +27,7 @@ return new class extends Migration
         DB::table('shop_plans')->insert(['id'=>3,'num'=>6,'price'=>68000,'check_in'=>'18:00','check_out'=>'12:00','filled_up'=>'0']);
         DB::table('shop_plans')->insert(['id'=>4,'num'=>8,'price'=>102000,'check_in'=>'18:00','check_out'=>'12:00','filled_up'=>'0']);
         DB::table('shop_plans')->insert(['id'=>5,'num'=>10,'price'=>138000,'check_in'=>'15:00','check_out'=>'12:00','filled_up'=>'0']);
-
     }
-    
 
     /**
      * Reverse the migrations.
