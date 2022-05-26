@@ -5,17 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Reserves extends Model
+class Shop extends Model
 {
     use HasFactory;
 
-    public function shops()
+    public function reserves()
     {
-        return $this->hasOne(Shops::class);
+        return $this->hasMany(Reserve::class);
     }
 
     public function shopPlans()
     {
-        return $this->hasOne(ShopPlans::class);
+        return $this->hasMany(ShopPlan::class);
     }
 }

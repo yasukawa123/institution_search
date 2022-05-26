@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('tel')->comment('電話番号');
             $table->string('manager')->comment('担当者');
             $table->string('zip_code_jp')->comment('郵便番号');
-            $table->string('prefectures')->comment('都道府県');
+            $table->string('prefecture')->comment('都道府県');
             $table->string('city')->comment('市区町村');
             $table->string('unique_name')->comment('地名番地');
             $table->string('images')->comment('画像');
