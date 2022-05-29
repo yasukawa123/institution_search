@@ -9,13 +9,15 @@ class Shop extends Model
 {
     use HasFactory;
 
+    protected $guarded = [];
+
     public function reserves()
     {
-        return $this->hasMany(Reserve::class);
+        return $this->belongsTo(Reserve::class);
     }
 
     public function shopPlans()
     {
-        return $this->hasMany(ShopPlan::class);
+        return $this->belongsTo(ShopPlan::class);
     }
 }

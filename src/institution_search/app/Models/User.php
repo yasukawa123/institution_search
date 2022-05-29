@@ -44,7 +44,7 @@ class User extends Authenticatable
 
     public function reserves()
     {
-        return $this->hasMany(Reserves::class);
+        return $this->hasMany(Reserve::class);
     }
 
 }

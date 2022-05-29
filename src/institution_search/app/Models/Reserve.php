@@ -9,18 +9,20 @@ class Reserve extends Model
 {
     use HasFactory;
 
-    public function uses()
+    protected $guarded = [];
+
+    public function users()
     {
-        return $this->hasOne(User::class);
+        return $this->belongsTo(User::class);
     }
 
     public function shops()
     {
-        return $this->hasOne(Shop::class);
+        return $this->belongsTo(Shop::class);
     }
 
     public function shopPlans()
     {
-        return $this->hasOne(ShopPlan::class);
+        return $this->hasMany(ShopPlan::class);
     }
 }
