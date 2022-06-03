@@ -17,67 +17,100 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <!-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> -->
+    <link href="{{ asset('css/common.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/top.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+   
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav me-auto">
+<!-- Header Start -->
+<header class="user-header">
+    <div class="user-header-wrapper">
+        <a href="#" class="brand">BLAND</a>
+        <nav class="nav">
+        <!-- <button class="nav__toggle" aria-expanded="false" type="button">
+            menu
+        </button> -->
+        <ul class="nav-wrapper">
+            <li class="nav-item"><a href="#">BLANDについて</a></li>
+            <li class="nav-item"><a href="#">予約について</a></li>
+            <li class="nav-item"><a href="#">お問合せ</a></li>
+            @guest
+                @if (Route::has('login'))
+                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                @endif
+                @if (Route::has('register'))
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                    </li>
+                @endif
+            @else
+                    <li class="nav-item dropdown">
+                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                    {{ Auth::user()->name }}
+                    </a>
 
-                    </ul>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="{{ route('logout') }}"
+                    onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">
+                        {{ __('Logout') }}
+                    </a>
 
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ms-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                            @if (Route::has('login'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                </li>
-                            @endif
-
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-                    </ul>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                    @csrf
+                    </form>
                 </div>
-            </div>
+                </li>
+            @endguest
+        </ul>
         </nav>
-
-        <main class="py-4">
-            @yield('content')
-        </main>
     </div>
+</header>
+
+<main>
+    @yield('content')
+</main>
+
+<footer class="user-footer">
+    <div class="container">
+    <div class="footer-flex-wrapper">
+        <div class="footer-wrapper">
+            <h5>Blandへようこそ</h5>
+            <ul>
+                <li class="footer-nav-item"><a href="#">BLANDとは</a></li>
+                <li class="footer-nav-item"><a href="#">demo text</a></li>
+                <li class="footer-nav-item"><a href="#">demo text</a></li>
+                <li class="footer-nav-item"><a href="#">demo text</a></li>
+                <li class="footer-nav-item"><a href="#">demo text</a></li>
+            </ul>
+        </div>
+        <div class="footer-wrapper">
+            <h5>Blandを体験</h5>
+            <ul>
+                <li class="footer-nav-item"><a href="#">BLANDとは</a></li>
+                <li class="footer-nav-item"><a href="#">demo text</a></li>
+                <li class="footer-nav-item"><a href="#">demo text</a></li>
+            </ul>
+        </div>
+        <div class="footer-wrapper">
+            <h5>Blandをもっと知る</h5>
+            <ul>
+                <li class="footer-nav-item"><a href="#">BLANDとは</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-center">
+        <h5>BLAND LOGO</h5>
+        <ui>
+            <li class="footer-nav-item"><a href="#">保護方針</a></li>
+            <li class="footer-nav-item"><a href="#">サービス方針</a></li>
+            <li class="footer-nav-item"><a href="#">demo text</a></li>
+            <li class="footer-nav-item"><a href="#">demo text</a></li>
+            <li class="footer-nav-item"><a href="#">demo text</a></li>
+        </ui>
+    </div>
+</footer> 
 </body>
 </html>
