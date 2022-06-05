@@ -3,14 +3,14 @@
   padding: 0;
 }
 
-@media (max-width: 659px) {
+/* @media (max-width: 659px) {
   .nav__toggle {
     display: block;
     position: absolute;
     right: 1rem;
     top: 1rem;
   }
-} */
+} */ */
 
 /*------------------------- 
 *共通：ヘッダー
