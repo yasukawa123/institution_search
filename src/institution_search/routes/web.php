@@ -17,6 +17,11 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/user', function () {
+    return view('user');
+});
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/user', \App\Http\Controllers\UserController::class)->name('社員一覧')->middleware('auth');

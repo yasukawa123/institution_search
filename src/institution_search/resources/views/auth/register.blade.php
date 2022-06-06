@@ -52,7 +52,6 @@
                                 @enderror
                             </div>
                         </div>
-
                         <div class="row mb-3">
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('Confirm Password') }}</label>
 
@@ -61,6 +60,42 @@
                             </div>
                         </div>
 
+                        <div class="row mb-3">
+                            <label for="birthdate" class="col-md-4 col-form-label text-md-end">{{ __('Birthdate') }}</label>
+                            <div class="col-md-6">
+                                <input id="birthdate" type="text" class="form-control" name="birthdate" required autocomplete="new-birthdate">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="tel" class="col-md-4 col-form-label text-md-end">{{ __('Tel') }}</label>
+                            <div class="col-md-6">
+                                <input id="tel" type="text" class="form-control" name="tel" required autocomplete="new-tel">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="zip_code" class="col-md-4 col-form-label text-md-end">{{ __('Zip_code') }}</label>
+                            <div class="col-md-6">
+                                <input id="zip_code" type="text" class="form-control" name="zip_code" required autocomplete="new-zip_code">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="prefecture" class="col-md-4 col-form-label text-md-end">{{ __('Prefecture') }}</label>
+                            <div class="col-md-6">
+                                <input id="prefecture" type="text" class="form-control" name="prefecture" required autocomplete="new-prefecture">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="city" class="col-md-4 col-form-label text-md-end">{{ __('City') }}</label>                            
+                            <div class="col-md-6">
+                                <input id="city" type="text" class="form-control" name="city" required autocomplete="new-city">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="unique_name" class="col-md-4 col-form-label text-md-end">{{ __('Unique_name') }}</label>
+                            <div class="col-md-6">
+                                <input id="unique_name" type="text" class="form-control" name="unique_name" required autocomplete="new-unique_name">
+                            </div>
+                        </div>
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
