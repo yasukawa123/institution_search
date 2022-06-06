@@ -16,6 +16,6 @@ class UserController extends Controller
     {
         $user = auth()->user();
         // $users = \App\Models\User::get(); // 社員一覧を取得
-        return view('user', compact('user')); // users.index.bldae を呼出し、 usersを渡す
+        return view('index', compact('user')); // users.index.bldae を呼出し、 usersを渡す
     }
 }
