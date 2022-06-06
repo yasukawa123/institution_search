@@ -21,6 +21,7 @@
                     <li class="nav-item"><a href="#">予約について</a></li>
                     <li class="nav-item"><a href="#">お問合せ</a></li>
                     <li class="nav-item"><a href="#">会員登録</a></li>
+                    <li class="nav-item"><a href="#">ログイン</a></li>
                 </ul>
                 </nav>
             </div>
