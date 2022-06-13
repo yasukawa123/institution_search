@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,11 +18,13 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/user', function () {
-    return view('user');
-});
+// Route::get('/user', function () {
+//     return view('user');
+// });
+Route::get('/user', \App\Http\Controllers\UserController::class)->name('社員一覧')->middleware('auth');
+
+Route::get('/shop', 'App\Http\Controllers\ShopController@index');
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/user', \App\Http\Controllers\UserController::class)->name('社員一覧')->middleware('auth');

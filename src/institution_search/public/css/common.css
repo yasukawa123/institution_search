@@ -11,7 +11,11 @@
     top: 1rem;
   }
 } */ 
-
+.container {
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+}
 /*------------------------- 
 *共通：ヘッダー
 -------------------------*/
@@ -26,7 +30,7 @@
   z-index: 99;
 }
 .user-header-wrapper {
-  width:1080px;
+  width:980px;
   margin: 0 auto;
 }
 .brand {
@@ -65,8 +69,8 @@
   box-shadow: #9e9e9e31;
 }
 .footer-flex-wrapper {
-  margin-top: 30px;
-  padding-top: 50px; 
+  margin-top: 50px;
+  /* padding-top: 30px;  */
   display: flex;
   flex-wrap: wrap;
 }
@@ -94,7 +98,7 @@
 
 
 .footer-center {
-  margin-top: 30px;
+  margin-top: 50px;
   border-top: 0.5px solid rgb(179, 179, 179);
   padding: 30px 0 30px;
   text-align: center;
