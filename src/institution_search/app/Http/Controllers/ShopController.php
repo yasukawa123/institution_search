@@ -47,9 +47,12 @@ class ShopController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Request $request, $id)
     {
-        //
+        //public function show(Request $request, $id)
+        $shop = Shop::findOrFail($id);
+    
+        return view('shop.show', ['shop' => $shop,]);
     }
 
     /**
