@@ -49,8 +49,7 @@ class ShopController extends Controller
      */
     public function show(Request $request, $id)
     {
-        //public function show(Request $request, $id)
-        $shop = Shop::findOrFail($id);
+        $shop = Shop::find($id);
     
         return view('shop.show', ['shop' => $shop,]);
     }

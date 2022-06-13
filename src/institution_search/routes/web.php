@@ -14,6 +14,7 @@ use Illuminate\Http\Request;
 |
 */
 
+// トップページ
 Route::get('/', function () {
     return view('index');
 });
@@ -21,10 +22,11 @@ Route::get('/', function () {
 // Route::get('/user', function () {
 //     return view('user');
 // });
-Route::get('/user', \App\Http\Controllers\UserController::class)->name('社員一覧')->middleware('auth');
+// トップページ
+Route::get('/user', [\App\Http\Controllers\UserController::class])->name('お客様')->middleware('auth');
 
 Route::get('/shop', 'App\Http\Controllers\ShopController@index');
-Route::get('/show/{id}', [ShopController::class, 'show'])->name('shop.show');
+Route::get('/shop/show/{id}', [App\Http\Controllers\ShopController::class, 'show'])->name('shop.show');
 
 Auth::routes();
 
