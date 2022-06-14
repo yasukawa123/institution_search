@@ -78,19 +78,19 @@
                     <div class="new-area-flex">
                         <div class="img-block">
                             <img src="/images/new_area/tokyo01_space.jpeg" alt="東京01">
-                            <p>東京01</p>
+                            <p>東京</p>
                         </div>
                         <div class="img-block">
                             <img src="/images/new_area/aichi01_space.jpeg" alt="愛知01">
-                            <p>愛知01</p>
+                            <p>愛知</p>
                         </div>
                         <div class="img-block">
                             <img src="/images/new_area/osaka01_space.jpeg" alt="大阪01">
-                            <p>大阪01</p>
+                            <p>大阪</p>
                         </div>
                         <div class="img-block">
                             <img src="/images/new_area/osaka02_space.jpeg" alt="大阪02">
-                            <p>大阪02</p>
+                            <p>大阪</p>
                         </div>
                     </div>
                 </div>
