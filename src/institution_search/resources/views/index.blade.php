@@ -63,10 +63,22 @@
 
                 <div class="container">
                     <ul class="search-nav-wrapper">
-                        <li class="search_nav_item">場所： <input type="text" id="name" name="name" required minlength="4" maxlength="8" size="10"></li>
+                        <li class="search_nav_item">場所： <input type="search" id="name" name="name" required minlength="4" maxlength="8" size="10"></li>
                         <li class="search_nav_item">金額： <input type="number" id="name" name="name" required minlength="4" maxlength="8" size="10"></li>
-                        <li class="search_nav_item">人数： <input type="number" id="name" name="name" required minlength="4" maxlength="8" size="10"></li>
-                        <li class="search_nav_icon"><input type="submit" id="name" name="name" required minlength="4" maxlength="8" size="10"><img src="/images/icons/icon-search.png" alt="予約検索"></li>
+                        <li class="search_nav_item">人数：
+                            <select name="人数">
+                                <option value="tokyo">1</option>
+                                <option value="kanagawa">2</option>
+                                <option value="chiba">3</option>
+                                <option value="saitama">4</option>
+                                <option value="ibaraki">5</option>
+                                <option value="ibaraki">6</option>
+                                <option value="ibaraki">7人以上</option>
+                            </select>
+                        </li>
+                        <li class="search_nav_icon">
+                            <button type="submit" id="sbtn2"><img src="/images/icons/icon-search.png" alt="予約検索"></button>
+                        </li>
                     </ul>
                 </div>
             </div>
