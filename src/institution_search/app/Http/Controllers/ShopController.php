@@ -16,7 +16,9 @@ class ShopController extends Controller
     public function index()
     {
         // Shop::all();でshopsテーブルに保存されている商品情報を全て取り出します。
-        $shops = Shop::all();
+        // $shops = Shop::all();
+        // ページネーション用に変更
+        $shops = Shop::paginate(3);
         return view('shop.index', ['shops' => $shops]);
     }
 

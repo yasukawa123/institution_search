@@ -17,6 +17,9 @@
             </div>
             @endforeach
         </div>
+        <div class="row justify-content-center" style="width:100%; height:20px; text-align:center">
+            {{ $shops->links() }}
+        </div>
     </div>
 @endsection
 

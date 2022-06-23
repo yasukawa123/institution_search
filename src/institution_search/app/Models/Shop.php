@@ -18,6 +18,6 @@ class Shop extends Model
 
     public function shopPlans()
     {
-        return $this->belongsTo(ShopPlan::class);
+        return $this->hasMany(ShopPlan::class);
     }
 }
