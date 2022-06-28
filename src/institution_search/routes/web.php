@@ -24,6 +24,7 @@ Route::get('/', function () {
 Route::get('/user', \App\Http\Controllers\UserController::class)->name('社員一覧')->middleware('auth');
 
 Route::get('/shop', 'App\Http\Controllers\ShopController@index');
+Route::get('/shop/{shop}', 'App\Http\Controllers\ShopController@show');
 
 Auth::routes();
 

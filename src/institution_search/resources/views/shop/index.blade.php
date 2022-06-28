@@ -2,6 +2,7 @@
 @section('head')
 <link href="{{ asset('/css/common.css') }}" rel="stylesheet" type="text/css">
 <link href="{{ asset('/css/shop.css') }}" rel="stylesheet" type="text/css">
+<!-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> -->
 @endsection
 @section('content')
     <div class="container">
@@ -41,14 +42,19 @@
                                 <p>¥ 00,000</p>
                             </div>
                             <!-- リンク -->
-                            <div class="shop-card-right-link">
-                                <p>プランを見る>></p>
-                            </div>
+                            <a href="/shop/{{ $shop->id }}">
+                                <div class="shop-card-right-link">
+                                    <p>プランを見る>></p>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
                 @endforeach
-            </div>
+            </div>  
         </div>
+        <div class="justify-content-center">
+                {{ $shops->links('pagination::bootstrap-4') }}
+        </div> 
     </div>
 @endsection
