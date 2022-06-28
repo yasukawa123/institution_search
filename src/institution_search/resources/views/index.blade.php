@@ -9,10 +9,10 @@
     </head>
     <body>
         <!-- Header Start -->
-        <header class="user-header">
-            <div class="user-header-wrapper">
+        <header class="user-top-header">
+            <div class="user-top-header-wrapper">
                 <a href="#" class="brand">BLAND</a>
-                <nav class="nav">
+                <nav class="top-nav">
                 <!-- <button class="nav__toggle" aria-expanded="false" type="button">
                     menu
                 </button> -->
@@ -210,7 +210,7 @@
             <div class="container">
             <div class="footer-flex-wrapper">
                 <div class="footer-wrapper">
-                    <h3>Blandへようこそ</h3>
+                    <h4>Blandへようこそ</h4>
                     <ul>
                         <li class="footer-nav-item"><a href="#">BLANDとは</a></li>
                         <li class="footer-nav-item"><a href="#">demo text</a></li>
@@ -220,7 +220,7 @@
                     </ul>
                 </div>
                 <div class="footer-wrapper">
-                    <h3>Blandを体験</h3>
+                    <h4>Blandを体験</h4>
                     <ul>
                         <li class="footer-nav-item"><a href="#">BLANDとは</a></li>
                         <li class="footer-nav-item"><a href="#">demo text</a></li>
@@ -228,7 +228,7 @@
                     </ul>
                 </div>
                 <div class="footer-wrapper">
-                    <h3>Blandをもっと知る</h3>
+                    <h4>Blandをもっと知る</h4>
                     <ul>
                         <li class="footer-nav-item"><a href="#">BLANDとは</a></li>
                     </ul>

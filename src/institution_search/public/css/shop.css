@@ -1,0 +1,84 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+/* @media (max-width: 659px) {
+  .nav__toggle {
+    display: block;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+  }
+} */ 
+
+.shops-flex {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+}
+
+/*------------------------- 
+*サイドバー
+-------------------------*/
+.left-sidebar {
+  width: 20%;
+  float: left;
+}
+.left-sidebar li {
+  list-style: none;
+}
+
+/*------------------------- 
+*ショップ一覧
+-------------------------*/
+.right-shops {
+  width: 80%;
+  float: right;
+}
+
+.shop-card {
+  margin: 20px;
+  background-color: darkgray;
+  display: flex;
+  height: 320px;
+}
+
+.shop-card-left {
+  width: 70%;
+  background-color: lightsteelblue;
+}
+
+.shop-card-right {
+  width: 30%;
+  padding: 3%;
+}
+.shop-card-right-top {
+  height: 80%;
+}
+.shop-card-right-title {
+  color: white;
+  margin-bottom: 5%;
+}
+.shop-card-right-tag {
+ font-size: 10px;
+ margin-bottom: 5%;
+}
+.shop-card-right-text {
+  
+  width: 100%;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 7;
+  overflow: hidden; 
+  font-size: 12px;
+}
+.shop-card-right-bottom {
+  height: 20%;
+}
+.shop-card-right-price {
+  font-size: 14px;
+}
+.shop-card-right-link {
+  font-size: 14px;
+}
