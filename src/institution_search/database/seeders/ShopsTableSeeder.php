@@ -16,6 +16,6 @@ class ShopsTableSeeder extends Seeder
     
     public function run()
     {
-        \App\Models\Shop::factory()->count(12)->create();
+        //
     }
 }

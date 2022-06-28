@@ -18,7 +18,7 @@ class Reserve extends Model
 
     public function shops()
     {
-        return $this->belongsTo(Shop::class);
+        return $this->hasMany(Shop::class);
     }
 
     public function shopPlans()

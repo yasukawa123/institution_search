@@ -17,7 +17,12 @@ class ShopPlanFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'shop_id' => random_int(1, 5),
+            'num' => random_int(1, 5),
+            'price' => random_int(1000, 2000),
+            'check_in' => '17:00',
+            'check_out' => '10:00',
+            'filled_up' => '0',
         ];
     }
 }

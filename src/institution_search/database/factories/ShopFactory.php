@@ -26,17 +26,7 @@ class ShopFactory extends Factory
     public function definition()
     {
         return [
-            'shop_plan_id' => random_int(1, 5),
-            'name' => $this->faker->country,
-            'email' => $this->faker->unique()->safeEmail,
-            'tel' => $this->faker->phoneNumber,
-            'manager' => $this->faker->name,
-            'zip_code_jp' => $this->faker->postcode,
-            'prefecture' => $this->faker->prefecture,
-            'city' => $this->faker->city,
-            'unique_name' => $this->faker->streetAddress,
-            'images' => $this->faker->imageUrl($width = 640, $height = 480, $category = 'cats', $randomize = true, $word = null),
-            'introduction_text' => $this->faker->realText,
+            //
         ];
     }
 }
