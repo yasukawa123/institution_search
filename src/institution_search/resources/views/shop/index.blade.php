@@ -2,10 +2,11 @@
 @section('head')
 <link href="{{ asset('/css/common.css') }}" rel="stylesheet" type="text/css">
 <link href="{{ asset('/css/shop.css') }}" rel="stylesheet" type="text/css">
-<!-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> -->
 @endsection
 @section('content')
     <div class="container">
+    <!-- 上部リンク遷移先 -->
+    <p><a href="/">トップ</a> > ショップリスト</p>
         <div class="shops-flex">
             <div class="left-sidebar">
                 <ul>
@@ -13,36 +14,41 @@
                     <li>人数</li>
                     <li>場所</li>
                 </ul>
+                <input id="sbtn" type="submit" value="検索" /> 
             </div>
             <div class="right-shops">
-                @foreach ($shops as $shop)
+                @foreach ($shops_list as $key => $shop_list)
                 <div class="shop-card">
                     <!-- 画像 -->
                     <div class="shop-card-left">
-                        {{ $shop->images }}
+                        <img src="{{ asset($shop_list['images01']) }}" width="auto" height="100%">
                     </div>
                     <!-- タイトル -->
                     <div class="shop-card-right">
                         <div class="shop-card-right-top">
                             <div class="shop-card-right-title">
-                                <h3>{{ $shop->name }}</h3>
+                                <h3>{{ $shop_list['name'] }}</h3>
                             </div>
                             <!-- 県 -->
                             <div class="shop-card-right-tag">
-                                <p>{{ $shop->prefecture }} > {{ $shop->city }}</p>
+                                <p>{{ $shop_list['prefecture'] }} > {{ $shop_list['city'] }}</p>
                             </div>
                             <!-- 紹介文 -->
                             <div class="shop-card-right-text">
-                                <p>{{ mb_strimwidth( $shop->introduction_text, 0, 280, '…', 'UTF-8' ) }}</p>
+                                <p>{{ mb_strimwidth( $shop_list['introduction_text'], 0, 280, '…', 'UTF-8' ) }}</p>
                             </div>
                         </div>
                         <div class="shop-card-right-bottom">
                             <!-- 金額 -->
                             <div class="shop-card-right-price">
-                                <p>¥ 00,000</p>
+                                <p>金額：¥{{ number_format($shop_list['price']) }}円 〜</p>
+                            </div>
+                            <!-- 人数 -->
+                            <div class="shop-card-right-price">
+                                <p>人数：{{ $shop_list['limit_num'] }}人 〜</p>
                             </div>
                             <!-- リンク -->
-                            <a href="/shop/{{ $shop->id }}">
+                            <a href="/shop={{ $key }}">
                                 <div class="shop-card-right-link">
                                     <p>プランを見る>></p>
                                 </div>
@@ -54,7 +60,6 @@
             </div>  
         </div>
         <div class="justify-content-center">
-                {{ $shops->links('pagination::bootstrap-4') }}
         </div> 
     </div>
 @endsection

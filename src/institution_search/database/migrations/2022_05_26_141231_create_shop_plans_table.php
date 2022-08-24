@@ -16,17 +16,20 @@ return new class extends Migration
     {
         Schema::create('shop_plans', function (Blueprint $table) {
             $table->id();
-            $table->integer('num')->comment('人数');
+            $table->integer('shop_id')->comment('ショップID');
+            $table->string('name')->comment('プラン名');
+            $table->string('introduction_text')->comment('プラン紹介');
+            $table->integer('limit_num')->comment('最大人数');
+            $table->integer('limit_num_small')->comment('子供人数');
             $table->integer('price')->comment('金額');
             $table->string('check_in')->comment('チェックイン');
             $table->string('check_out')->comment('チェックアウト');
             $table->boolean('filled_up')->default(false)->comment('空き埋まり状況');
+            $table->string('images01')->comment('画像01');
+            $table->string('images02')->comment('画像02');
+            $table->string('images03')->comment('画像03');
+            $table->timestamps();
         });
-        DB::table('shop_plans')->insert(['id'=>1,'num'=>2,'price'=>20000,'check_in'=>'16:00','check_out'=>'10:00','filled_up'=>'0']);
-        DB::table('shop_plans')->insert(['id'=>2,'num'=>4,'price'=>60000,'check_in'=>'16:00','check_out'=>'10:00','filled_up'=>'0']);
-        DB::table('shop_plans')->insert(['id'=>3,'num'=>6,'price'=>68000,'check_in'=>'18:00','check_out'=>'12:00','filled_up'=>'0']);
-        DB::table('shop_plans')->insert(['id'=>4,'num'=>8,'price'=>102000,'check_in'=>'18:00','check_out'=>'12:00','filled_up'=>'0']);
-        DB::table('shop_plans')->insert(['id'=>5,'num'=>10,'price'=>138000,'check_in'=>'15:00','check_out'=>'12:00','filled_up'=>'0']);
     }
 
     /**

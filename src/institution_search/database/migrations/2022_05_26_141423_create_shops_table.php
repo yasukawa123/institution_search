@@ -16,7 +16,6 @@ return new class extends Migration
     {
         Schema::create('shops', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('shop_plan_id')->constrained()->onDelete('cascade');
             $table->string('name')->comment('店名');
             $table->string('email')->unique('メールアドレス');
             $table->string('tel')->comment('電話番号');
@@ -25,7 +24,9 @@ return new class extends Migration
             $table->string('prefecture')->comment('都道府県');
             $table->string('city')->comment('市区町村');
             $table->string('unique_name')->comment('地名番地');
-            $table->string('images')->comment('画像');
+            $table->string('images01')->comment('画像01');
+            $table->string('images02')->comment('画像02');
+            $table->string('images03')->comment('画像03');
             $table->string('introduction_text')->comment('紹介テキスト');
             $table->timestamps();
         });

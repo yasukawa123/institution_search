@@ -156,7 +156,8 @@ h3 {
 /* -----------
 ** NEWS
 ------------ */
-.new-area-container {
+.news-area-container {
+    margin-bottom: 30px;
     width: 100%;
     display: flex;
     flex-wrap: wrap;

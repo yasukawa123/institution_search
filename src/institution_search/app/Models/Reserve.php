@@ -10,6 +10,7 @@ class Reserve extends Model
     use HasFactory;
 
     protected $guarded = [];
+    protected $fillable = ['user_id', 'shop_id', 'shop_plan_id', 'reserve_id'];
 
     public function users()
     {
