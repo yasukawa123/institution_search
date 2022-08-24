@@ -16,10 +16,13 @@ return new class extends Migration
     {
         Schema::create('reserves', function (Blueprint $table) {
             $table->id()->comment('予約番号');
-            $table->foreignId('user_id')->constrained()->onDelete('cascade');
-            $table->foreignId('shop_id')->constrained()->onDelete('cascade');
-            $table->foreignId('shop_plan_id')->constrained()->onDelete('cascade');
+            $table->integer('user_id')->constrained()->onDelete('cascade');
+            $table->integer('shop_id')->constrained()->onDelete('cascade');
+            $table->integer('shop_plan_id')->constrained()->onDelete('cascade');
             $table->date('reserve_date')->comment('予約日');
+            $table->time('check_in')->comment('チェックイン予定時間');
+            $table->integer('num')->comment('大人人数');
+            $table->integer('num_small')->comment('子供人数');
             $table->timestamps();
         });
     }

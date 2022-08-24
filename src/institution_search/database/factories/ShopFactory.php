@@ -26,7 +26,22 @@ class ShopFactory extends Factory
     public function definition()
     {
         return [
+<<<<<<< HEAD
             //
+=======
+            'name' => $this->faker->country,
+            'email' => $this->faker->unique()->safeEmail,
+            'tel' => $this->faker->phoneNumber,
+            'manager' => $this->faker->name,
+            'zip_code_jp' => $this->faker->postcode,
+            'prefecture' => $this->faker->prefecture,
+            'city' => $this->faker->city,
+            'unique_name' => $this->faker->streetAddress,
+            'images01' => $this->faker->imageUrl($width = 640, $height = 480, $category = 'cats', $randomize = true, $word = null),
+            'images02' => $this->faker->imageUrl($width = 640, $height = 480, $category = 'cats', $randomize = true, $word = null),
+            'images03' => $this->faker->imageUrl($width = 640, $height = 480, $category = 'cats', $randomize = true, $word = null),
+            'introduction_text' => $this->faker->realText,
+>>>>>>> feature-make-design_site
         ];
     }
 }

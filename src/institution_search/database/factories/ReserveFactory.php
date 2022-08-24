@@ -30,6 +30,9 @@ class ReserveFactory extends Factory
             'shop_id' => random_int(1, 5),
             'shop_plan_id' => random_int(1, 5),
             'reserve_date' => $this->faker->dateTimeBetween($startDate = 'now', $endDate = '+2 week'),
+            'check_in' => "15:00",
+            'num' => random_int(1, 8),
+            'num_small' => random_int(1, 2),
         ];
     }
 }
