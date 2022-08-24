@@ -1,24 +1,3 @@
-<<<<<<< HEAD
-@extends('layouts.app')
-
-@section('content')
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">
-                        {{ $shop->name }}
-                    </div>
-                    <div class="card-body">
-                        {{ $shop->images }}
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-@endsection
-
-=======
 @extends('layouts.header_footer')
 @section('head')
 <link href="{{ asset('/css/common.css') }}" rel="stylesheet" type="text/css">
@@ -69,4 +48,3 @@
 		<p>{{ $shop->tel }}</p>
 	</div>
 @endsection
->>>>>>> feature-make-design_site

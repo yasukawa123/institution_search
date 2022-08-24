@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 
@@ -62,15 +63,12 @@ Route::group(['middleware' => ['auth', 'can:user']], function () {
 // Route::get('/user', function () {
 //     return view('user');
 // });
-<<<<<<< HEAD
-Route::get('/user', \App\Http\Controllers\UserController::class)->name('社員一覧')->middleware('auth');
+// Route::get('/user', \App\Http\Controllers\UserController::class)->name('社員一覧')->middleware('auth');
 
-Route::get('/shop', 'App\Http\Controllers\ShopController@index');
-Route::get('/shop/{shop}', 'App\Http\Controllers\ShopController@show');
+// Route::get('/shop', 'App\Http\Controllers\ShopController@index');
+// Route::get('/shop/{shop}', 'App\Http\Controllers\ShopController@show');
 
-Auth::routes();
+// Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-=======
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 // Route::get('/user', \App\Http\Controllers\UserController::class)->name('社員一覧')val->middleware('auth');
->>>>>>> feature-make-design_site

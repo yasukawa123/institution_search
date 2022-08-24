@@ -15,10 +15,6 @@ class ShopPlansTableSeeder extends Seeder
      */
     public function run()
     {
-<<<<<<< HEAD
-        \App\Models\ShopPlan::factory()->count(12)->create();
-=======
         \App\Models\ShopPlan::factory()->count(24)->create();
->>>>>>> feature-make-design_site
     }
 }

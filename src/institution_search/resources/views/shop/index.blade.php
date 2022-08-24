@@ -4,18 +4,7 @@
 <link href="{{ asset('/css/shop.css') }}" rel="stylesheet" type="text/css">
 @endsection
 @section('content')
-    <div class="container">
-<<<<<<< HEAD
-        <div class="row justify-content-left">
-            @foreach ($shops as $shop)
-            <div class="col-md-4 mb-2">
-                <div class="card">
-                    <div class="card-header">
-                        <a href="/shop/{{ $shop->id }}">{{ $shop->name }}</a>
-                    </div>
-                    <div class="card-body">
-                        {{ $shop->images }}
-=======
+<div class="container">
     <!-- 上部リンク遷移先 -->
     <p><a href="/">トップ</a> > ショップリスト</p>
         <div class="shops-flex">
@@ -33,7 +22,6 @@
                     <!-- 画像 -->
                     <div class="shop-card-left">
                         <img src="{{ asset($shop_list['images01']) }}" width="auto" height="100%">
->>>>>>> feature-make-design_site
                     </div>
                     <!-- タイトル -->
                     <div class="shop-card-right">
@@ -71,13 +59,7 @@
                 @endforeach
             </div>  
         </div>
-<<<<<<< HEAD
-        <div class="row justify-content-center" style="width:100%; height:20px; text-align:center">
-            {{ $shops->links() }}
-        </div>
-=======
         <div class="justify-content-center">
         </div> 
->>>>>>> feature-make-design_site
     </div>
 @endsection

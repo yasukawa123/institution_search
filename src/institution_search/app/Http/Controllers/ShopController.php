@@ -18,20 +18,11 @@ class ShopController extends Controller
     // 一覧ページ（index）に返すのは下の処理
     public function index()
     {
-<<<<<<< HEAD
-        // Shop::all();でshopsテーブルに保存されている商品情報を全て取り出します。
-        // $shops = Shop::all();
-        // ページネーション用に変更
-        $shops = Shop::paginate(3);
-        return view('shop.index', ['shops' => $shops]);
-    }
-=======
         // データを所得
 		// $shops = Shop::paginate(5);
 		// $shops = Shop::paginate(6);
         $shops = Shop::get();
 		$shopPlans = ShopPlan::select('shop_id', 'price', 'limit_num')->get();
->>>>>>> feature-make-design_site
 
 		// ショップの情報を組み替える
 		$shops_make = [];
@@ -75,11 +66,7 @@ class ShopController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show(Shop $shop)
-<<<<<<< HEAD
-    {
-        return view('shop/show', ['shop' => $shop]);
-=======
-    {   
+    {  
         $shopPlans = ShopPlan::where('shop_id', $shop['id'])->where('filled_up','>',0)->get();
         
         return view('shop.show',  compact('shop', 'shopPlans')); 
@@ -139,7 +126,6 @@ class ShopController extends Controller
         // echo"</pre>";
         // ShopPlanを修正する処理を作る　0->1
         return redirect('/reserve');
->>>>>>> feature-make-design_site
     }
 
     /**

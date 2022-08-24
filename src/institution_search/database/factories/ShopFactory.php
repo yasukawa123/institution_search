@@ -26,9 +26,7 @@ class ShopFactory extends Factory
     public function definition()
     {
         return [
-<<<<<<< HEAD
             //
-=======
             'name' => $this->faker->country,
             'email' => $this->faker->unique()->safeEmail,
             'tel' => $this->faker->phoneNumber,
@@ -41,7 +39,6 @@ class ShopFactory extends Factory
             'images02' => $this->faker->imageUrl($width = 640, $height = 480, $category = 'cats', $randomize = true, $word = null),
             'images03' => $this->faker->imageUrl($width = 640, $height = 480, $category = 'cats', $randomize = true, $word = null),
             'introduction_text' => $this->faker->realText,
->>>>>>> feature-make-design_site
         ];
     }
 }
