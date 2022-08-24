@@ -23,7 +23,7 @@
 					<div class="shop-card-right-top">
 						<p>id確認用：{{ $shopPlan->id }}</p>
 						<div class="shop-card-right-title">
-							<p>プランの名前追加</p>
+							<p>プラん名前追加</p>
 						</div>
 							<p>shop_id確認用：{{ $shopPlan->shop_id }}</p>
 						<!-- 県 -->
